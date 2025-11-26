@@ -1,0 +1,144 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== Purple Dark Background ===== */
+body {
+    background: radial-gradient(circle at top, #2b103d, #110017 70%);
+    color: #f2e6ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* ===== Container ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(155, 80, 200, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0px 0px 40px rgba(80,0,100,0.4),
+                inset 0px 0px 20px rgba(255,255,255,0.05);
+    border: 1px solid rgba(180, 70, 255, 0.16);
+    animation: fadeIn 0.5s ease;
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+    background: rgba(180, 70, 255, 0.12);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 15px rgba(180,70,255,0.08);
+    border: 1px solid rgba(200, 130, 255, 0.25);
+}
+
+.toolbar .head {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Inputs + Selects */
+.toolbar input[type="text"],
+.toolbar select {
+    background: rgba(180,70,255,0.15);
+    border: 1px solid rgba(220,150,255,0.25);
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #f2e6ff;
+    transition: 0.2s;
+}
+
+.toolbar input[type="text"]:focus {
+    border-color: #d787ff;
+    box-shadow: 0px 0px 8px #d787ff;
+}
+
+/* Color Picker */
+.color span {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.color input {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Buttons Toolbar ===== */
+.btn-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn-toolbar button {
+    background: rgba(180, 70, 255, 0.18);
+    border: 1px solid rgba(220,150,255,0.25);
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #f7e9ff;
+    cursor: pointer;
+    font-size: 19px;
+    transition: 0.25s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Purple Neon Hover */
+.btn-toolbar button:hover {
+    background: rgba(200, 120, 255, 0.28);
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 12px #d787ff;
+    border-color: #d787ff;
+}
+
+/* Code Button */
+#show-code {
+    font-size: 16px !important;
+}
+
+/* ===== Editor Content ===== */
+#content {
+    width: 100%;
+    min-height: 420px;
+    background: rgba(180, 70, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 22px;
+    margin-top: 10px;
+    color: #fff;
+    outline: none;
+    overflow-y: auto;
+    border: 1px solid rgba(200,150,255,0.25);
+    box-shadow: inset 0px 0px 15px rgba(180,70,255,0.08);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Scrollbar */
+#content::-webkit-scrollbar {
+    width: 8px;
+}
+#content::-webkit-scrollbar-thumb {
+    background: rgba(220,150,255,0.4);
+    border-radius: 10px;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
